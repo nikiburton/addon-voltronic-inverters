@@ -1,16 +1,16 @@
 name: "Voltronic"
 description: "Monitor and control Voltronic based inverters from Home Assistant."
-version: "1.0.3"
+version: "1.0.4"
 slug: "voltronic"
 init: false
 udev: true
 
 # Añadido
-privileged:
-  - SYS_RAWIO
-full_access: true
-host_network: true
-apparmor: false
+# privileged:
+#   - SYS_RAWIO
+# full_access: true
+# host_network: true
+# apparmor: false
 # fin añadido
 devices:
   - /dev/ttyS0
