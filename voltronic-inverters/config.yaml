@@ -6,9 +6,9 @@ init: false
 udev: true
 
 # Añadido
-privileged:
-  - SYS_RAWIO
+privileged: true
 full_access: true
+apparmor: false
 # fin añadido
 
 devices:
