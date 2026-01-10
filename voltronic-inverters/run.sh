@@ -72,7 +72,7 @@ bashio::log.info "Configuration completed successfully."
 # Opción alternativa Gemini
 # Sustituimos el exec por este bucle infinito:
 while true; do
-    bashio::log.info "Starting inverter polling..."
+    bashio::log.info "Starting inverter polling...2"
     
     # LLAMADA DIRECTA AL BINARIO (en lugar del entrypoint.sh)
     # Usamos la ruta absoluta donde se compiló el programa
