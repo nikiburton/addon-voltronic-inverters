@@ -66,4 +66,18 @@ cat "$MQTT_CONFIG"
 
 bashio::log.info "Configuration completed successfully."
 
-exec /opt/inverter-mqtt/entrypoint.sh
+# Opción original
+# exec /opt/inverter-mqtt/entrypoint.sh
+
+# Opción alternativa Gemini
+# Sustituimos el exec por este bucle infinito:
+while true; do
+    bashio::log.info "Starting inverter polling..."
+    
+    # Ejecutamos el script que lanza el poller
+    /opt/inverter-mqtt/entrypoint.sh
+    
+    bashio::log.info "Polling cycle finished. Waiting 30 seconds..."
+    sleep 30
+done
+
