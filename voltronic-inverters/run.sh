@@ -66,5 +66,6 @@ cat "$MQTT_CONFIG"
 
 bashio::log.info "Configuration completed successfully."
 
+echo "[DEBUG] Running entrypoint.sh:"
 exec /opt/inverter-mqtt/entrypoint.sh
 
