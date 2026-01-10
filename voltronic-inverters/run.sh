@@ -69,9 +69,11 @@ bashio::log.info "Configuration completed successfully."
 
 # --- MODIFICADO: Parche quirúrgico para Raspberry Pi 5 ---
 # Eliminamos la variable UNBUFFER del entrypoint.sh porque 'stdbuf' rompe en Pi 5
-echo "[DEBUG] Patching entrypoint.sh for Raspberry Pi 5 compatibility..."
-sed -i 's/\$UNBUFFER //g' /opt/inverter-mqtt/entrypoint.sh
-sed -i 's/UNBUFFER=.*//g' /opt/inverter-mqtt/entrypoint.sh
+# echo "[DEBUG] Patching entrypoint.sh for Raspberry Pi 5 compatibility..."
+# sed -i 's/\$UNBUFFER //g' /opt/inverter-mqtt/entrypoint.sh
+# sed -i 's/UNBUFFER=.*//g' /opt/inverter-mqtt/entrypoint.sh
+
+echo "Sin modificacion para Raspberry Pi 5"
 
 echo "[DEBUG] Running entrypoint.sh:"
 exec /opt/inverter-mqtt/entrypoint.sh
