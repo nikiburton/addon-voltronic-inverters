@@ -6,11 +6,12 @@ init: false
 udev: true
 
 # Añadido
-privileged: true
+privileged:
+  - SYS_RAWIO
 full_access: true
+host_network: true
 apparmor: false
 # fin añadido
-
 devices:
   - /dev/ttyS0
   - /dev/ttyUSB0
