@@ -74,10 +74,12 @@ bashio::log.info "Configuration completed successfully."
 while true; do
     bashio::log.info "Starting inverter polling..."
     
-    # Ejecutamos el script que lanza el poller
-    /opt/inverter-mqtt/entrypoint.sh
+    # LLAMADA DIRECTA AL BINARIO (en lugar del entrypoint.sh)
+    # Usamos la ruta absoluta donde se compiló el programa
+    /opt/inverter-cli/bin/inverter_poller
     
-    bashio::log.info "Polling cycle finished. Waiting 30 seconds..."
+    # Si el programa falla o termina, esperamos antes de reintentar
+    bashio::log.info "Cycle finished. Waiting 30 seconds..."
     sleep 30
 done
 
